@@ -3,7 +3,7 @@
 @charset "UTF-8";
 @import 'jekyll-theme-cayman';
 
-/*html
+<!--html
 {
   margin:0;
   padding:0;
@@ -316,4 +316,4 @@ footer a
   10% { opacity:.8;}
   20% { opacity:0;}
   100% { opacity:0;}
-}*/
+}-->
