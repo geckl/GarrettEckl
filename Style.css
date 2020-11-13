@@ -1,0 +1,319 @@
+/*Stylesheet*/
+
+@charset "UTF-8";
+
+
+html
+{
+  margin:0;
+  padding:0;
+  height:100%;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  /*font-family:wingdings;*/
+
+ 
+}
+
+
+body
+{
+  margin:0;
+  padding:0;
+  background-repeat:repeat-x;
+  background-color:black;
+  min-height:100%;
+}
+
+
+body::before
+{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  min-height:100%;
+  z-index:-1;
+  background-image:url(assets/images/Code-Background.jpg);
+  background-repeat:repeat;
+  opacity:0.1;
+}
+
+
+p
+{
+  margin:0 0 0 2px;
+  padding:0;
+}
+
+header
+{
+  margin:0;
+  padding:0;
+
+
+}
+
+
+h1
+{
+  margin:50x;
+  padding:0;
+  color:white;
+  text-align:center;
+
+}
+
+
+h2
+{
+  margin:0;
+  padding:0;
+  color:white;
+  text-align:center;
+  
+
+}
+
+
+
+h3
+{
+  position: relative;
+  float:left;
+  color:black=-\;;
+  /*width:20%;*/
+  font-size:12px;
+  padding-top:10px;
+  height:25px;
+}
+
+h3.one
+{
+margin-top:240px;
+margin-left:20%;
+}
+
+h3.two
+{
+margin-top:80px;
+margin-left:80%;
+}
+
+h3.three
+{
+margin-top:40px;
+margin-left:20%;
+}
+
+h3.four
+{
+margin-top:0px;
+margin-left:80%;
+}
+
+h3.five
+{
+margin-top:120px;
+margin-left:20%;
+}
+
+
+
+
+
+h3:hover ~ p:nth-of-type(-n+1)
+{
+  display:block;
+}
+
+h3:hover ~ p:nth-of-type(-n+2)
+{
+  display:block;
+}
+
+h3:hover ~ p:nth-of-type(-n+3)
+{
+  display:block;
+}
+
+h3:hover ~ p:nth-of-type(-n+4)
+{
+  display:block;
+}
+
+h3:hover ~ p:nth-of-type(-n+5)
+{
+  display:block;
+}
+
+
+
+.wrapper
+{
+  font-size:5px;
+  position:relative;
+  bottom:-850px;
+  text-decoration:none;
+  text-align:center;
+  color:black;
+}
+
+.wrapper a
+{
+  color:black;
+}
+
+.wrapper h3
+{
+  color:black;
+}
+
+
+
+footer
+{
+  margin:0;
+  padding:0;
+  position:relative;
+  bottom:-750px;
+  color:black;
+  text-align:center;
+}
+
+footer a
+{
+  color:black;
+}
+
+/*div:hover
+{
+    visibility:visible;
+}*/
+
+
+.page-wrapper p:first-of-type
+{
+  width:40%;
+  height:300px;
+  position:absolute;
+  bottom:-175px;
+  left:30%;
+  color:white;
+  font-size:8px;
+  display:none;
+  z-index:1;
+}
+
+.page-wrapper p:nth-of-type(2)
+{
+  width:40%;
+  height:300px;
+  position:absolute;
+  bottom:-225px;
+  left:30%;
+  color:white;
+  font-size:8px;
+  display:none;
+  z-index:1;
+}
+
+.page-wrapper p:nth-of-type(3)
+{
+  width:40%;
+  height:300px;
+  position:absolute;
+  bottom:-300px;
+  left:30%;
+  color:white;
+  font-size:8px;
+  display:none;
+  z-index:1;
+}
+
+.page-wrapper p:nth-of-type(4)
+{
+  width:40%;
+  height:300px;
+  position:absolute;
+  bottom:-325px;
+  left:30%;
+  color:white;
+  font-size:8px;
+  display:none;
+  z-index:1;
+}
+
+.page-wrapper p:nth-of-type(5)
+{
+  width:40%;
+  height:300px;
+  position:absolute;
+  bottom:-375px;
+  left:30%;
+  color:white;
+  font-size:8px;
+  display:none;
+  z-index:1;
+}
+
+
+.extra1
+{
+  width:40%;
+  height:300px;
+  position:absolute;
+  bottom:-150px;
+  left:30%;
+  /*border: 2px solid red;
+  border-radius: 12px;*/
+  box-shadow: 2px 0px 10px white;
+  background-image:url(assets/images/CMD.png);
+  background-size:cover;
+  z-index:0;
+}
+
+
+.extra2
+{
+  position: absolute;
+  top:0;
+  width:20%;
+  height:50px;
+  left:40%
+}
+
+
+.extra3
+{
+  margin:0;
+  padding:0;
+  height:1000px;
+  width:100%;
+  position:absolute;
+  left:0;
+  top:0;
+  background-image:url(assets/images/Light.jpg);
+  background-position:-20%;
+  z-index:-1;
+  opacity:0.5;
+  animation: blinker 1s linear infinite;
+  animation-duration:.05s;
+  animation-timing-function:ease-out;
+  animation-play-state:paused;
+}
+
+
+
+.extra2:hover + .extra3
+{
+  animation-play-state:running;
+}
+
+
+@keyframes blinker {
+ from {opacity:0;}  
+  10% { opacity:.8;}
+  20% { opacity:0;}
+  100% { opacity:0;}
+}
