@@ -217,7 +217,7 @@ hr {
   background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
 }
 
-span .icon {
+.btn .icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -226,7 +226,7 @@ span .icon {
   color: blue;
 }
 
-span .icon {
+.btn-github .icon {
   opacity: 0.9;
   background: url("../images/Record.png") 0 0 no-repeat;
 }
