@@ -1,3 +1,3 @@
-<span class="blinking1">Musician</span>
-<span class="blinking2">Producer</span>
-<span class="blinking3">Programmer</span>
+<span class="blinking1">MUSICIAN</span>
+<span class="blinking2">PRODUCER</span>
+<span class="blinking3">PROGRAMMER</span>
