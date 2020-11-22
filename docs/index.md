@@ -1,1 +1,3 @@
-<span class="blinking">Am I blinking?</span>
+<span class="blinking">Musician</span>
+<span class="blinking2">Producer</span>
+<span class="blinking3">Programmer</span>
