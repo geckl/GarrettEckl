@@ -1,1 +1,1 @@
-This is a Test
+<span class="blinking">Am I blinking?</span>
