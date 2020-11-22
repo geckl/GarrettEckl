@@ -295,6 +295,12 @@ iframe
     	top:1px;
     }
 
+span
+{
+  position:fixed;
+  top:50%;
+  left:50%;
+}
 .blinking1{
     animation:blinkingText1 1.2s infinite;
 }
