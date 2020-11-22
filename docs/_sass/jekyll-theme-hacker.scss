@@ -304,7 +304,7 @@ span
   transform:translate(-50%, 0);
 }
 .blinking1{
-    animation:blinkingText1 1.2s infinite;
+    animation:blinkingText1 5s infinite;
 }
 @keyframes blinkingText1{
     0%{     color: transparent;}
@@ -315,7 +315,7 @@ span
 }
 
 .blinking2{
-    animation:blinkingText2 1.2s infinite;
+    animation:blinkingText2 5s infinite;
 }
 @keyframes blinkingText2{
     0%{     color: transparent;}
@@ -327,7 +327,7 @@ span
 }
 
 .blinking3{
-    animation:blinkingText3 1.2s infinite;
+    animation:blinkingText3 5s infinite;
 }
 @keyframes blinkingText3{
     0%{     color: transparent;}
