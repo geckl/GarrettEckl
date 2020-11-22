@@ -299,9 +299,33 @@ iframe
     animation:blinkingText 1.2s infinite;
 }
 @keyframes blinkingText{
-    0%{     color: #000;    }
-    49%{    color: #000; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #000;    }
+    0%{     color: transparent;}
+    11%{    color: #000;}
+    22%{    color: #000;}
+    33%{    color:transparent;}
+    100%{   color: #transparent;}
+}
+
+.blinking2{
+    animation:blinkingText2 1.2s infinite;
+}
+@keyframes blinkingText2{
+    0%{     color: transparent;}
+    33%{    color: transparent;}
+    44%{    color: #000;}
+    55%{    color:#000;}
+    66%{    color:transparent;}
+    100%{   color: #transparent;}
+}
+
+.blinking3{
+    animation:blinkingText3 1.2s infinite;
+}
+@keyframes blinkingText3{
+    0%{     color: transparent;}
+    66%{    color: transparent;}
+    77%{    color: #000;}
+    88%{    color:#000;}
+    99%{    color:transparent;}
+    100%{   color: #transparent;}
 }
