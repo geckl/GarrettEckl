@@ -289,3 +289,26 @@ iframe
 {
   display:block;
 }
+
+.myButton2 {
+    	background-color:transparent;
+    	border:0px solid #241d13;
+    	display:inline-block;
+    	cursor:pointer;
+    	color:#ffffff;
+    	font-family:Courier New;
+    	font-size:18px;
+    	font-style:italic;
+    	padding:4px 10px;
+    	text-decoration:none;
+    	text-align:center;
+    	vertical-align:top;
+    	width: 75px;
+    }
+.myButton2:hover {
+    	background-color:transparent;
+    }
+.myButton2:active {
+    	position:relative;
+    	top:1px;
+    }
