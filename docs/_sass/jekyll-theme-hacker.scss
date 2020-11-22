@@ -305,7 +305,7 @@ span
   font-family:"Courier New", Courier, monospace;
 }
 .blinking1{
-    animation:blinkingText1 5s infinite;
+    animation:blinkingText1 15s infinite;
 }
 @keyframes blinkingText1{
     0%{     color: transparent;}
@@ -316,7 +316,7 @@ span
 }
 
 .blinking2{
-    animation:blinkingText2 5s infinite;
+    animation:blinkingText2 15s infinite;
 }
 @keyframes blinkingText2{
     0%{     color: transparent;}
@@ -328,7 +328,7 @@ span
 }
 
 .blinking3{
-    animation:blinkingText3 5s infinite;
+    animation:blinkingText3 15s infinite;
 }
 @keyframes blinkingText3{
     0%{     color: transparent;}
