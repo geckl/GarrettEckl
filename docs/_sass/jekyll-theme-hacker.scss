@@ -295,10 +295,10 @@ iframe
     	top:1px;
     }
 
-.blinking{
-    animation:blinkingText 1.2s infinite;
+.blinking1{
+    animation:blinkingText1 1.2s infinite;
 }
-@keyframes blinkingText{
+@keyframes blinkingText1{
     0%{     color: transparent;}
     11%{    color: #000;}
     22%{    color: #000;}
