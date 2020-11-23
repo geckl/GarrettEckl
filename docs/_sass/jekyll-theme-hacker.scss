@@ -15,6 +15,7 @@ body {
   color: $body-foreground;
   font-size: 16px;
   line-height: 1.5;
+  max-width:100%;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
@@ -88,10 +89,11 @@ header h2 {
 
 #main_content {
   width: 100%;
+  max-width:100%;
   -webkit-font-smoothing: antialiased;
 }
 section img {
-  max-width: 100%
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
