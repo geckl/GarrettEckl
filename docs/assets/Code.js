@@ -190,14 +190,14 @@ function pivotChord(chords1,chords2)
             var identical=0;
             for(var j=0;j<3;j++)
             {
-                if(chords1.notes[h][j]==chords2.notes[i][j])
+                if(chords1[h][j]==chords2[i][j])
                     identical++;
                 
             }
             //if the chords match and the chord is a subdominant in key 2 return the pivot chord
-            if(identical==3 && (chords2.notes[i][0]==chords2.notes[0][0]+5 || chords2.notes[i][1]==chords2.notes[0][0]+5))
+            if(identical==3 && (chords2[i][0]==chords2[0][0]+5 || chords2[i][1]==chords2[0][0]+5))
             {
-                //return chords1.notes[h][0];
+                //return chords1[h];
                 return h;
             }
             else if(identical==3)
@@ -208,6 +208,7 @@ function pivotChord(chords1,chords2)
     }
     return bestChoice;
 }
+
 
 function diminishedChord(tonicNote){
   var fullyDiminished=[octave(tonicNote-1),octave(tonicNote+2),octave(tonicNote+5),octave(tonicNote+8)];
@@ -255,6 +256,13 @@ function modulationEquation(Key1,Key1Accidental,Key1Mode,Key2,Key2Accidental,Key
    modulationSequence.push(pcToName(chords2[4]));
    modulationSequence.push(pcToName(chords2[0]));
  }
+ 
+ else if(pivotChord(chords1,chords2) != 100)
+{
+   modulationSequence.push(pcToName(chords1[0]));
+   modulationSequence.push(pcToName(chords1[pivotChord(chords1,chords2)]));
+   modulationSequence.push(pcToName(chords2[0]));
+}
   
  else
  {
