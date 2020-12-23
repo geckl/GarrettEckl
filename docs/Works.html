@@ -10,3 +10,293 @@ layout: default
   </div>
 <br><br><br><br>
 </div>
+<script src="Code.js"></script>
+
+<body style="max-width: 500px;margin: auto;background:grey;">
+    <h2>The Modulation Equation</h2>
+    <label for="numberInput"> Enter two keys and click submit dummy. </label><br>
+    <span>
+    1st Key:
+    <label for="A">A</label>
+    <input
+      type="radio"
+      id="9"
+      name="Key1"
+    />
+    <label for="B">B</label>
+    <input
+      type="radio"
+      id="11"
+      name="Key1"
+    />
+    <label for="C">C</label>
+    <input
+      type="radio"
+      id="0"
+      name="Key1"
+    />
+    <label for="D">D</label>
+    <input
+      type="radio"
+      id="2"
+      name="Key1"
+    />
+    <label for="E">E</label>
+    <input
+      type="radio"
+      id="4"
+      name="Key1"
+    />
+    <label for="F">F</label>
+    <input
+      type="radio"
+      id="5"
+      name="Key1"
+    />
+    <label for="G">G</label>
+    <input
+      type="radio"
+      id="7"
+      name="Key1"
+    />
+    </span>
+    <br>
+    Accidental: 
+    <label for="b">b</label>
+    <input
+      type="radio"
+      id="-1"
+      name="Key1Accidental"
+    />
+    <label for="♮">♮</label>
+    <input
+      type="radio"
+      id="0"
+      name="Key1Accidental"
+    />
+    <label for="#">#</label>
+    <input
+      type="radio"
+      id="1"
+      name="Key1Accidental"
+    />
+    <br>
+    Mode: 
+    <label for="Major">Major</label>
+    <input
+      type="radio"
+      id="Major"
+      name="Key1Mode"
+    />
+    <label for="Minor">Minor</label>
+    <input
+      type="radio"
+      id="Minor"
+      name="Key1Mode"
+    />
+    <br>
+    <br>
+    <br>
+        <span>
+    2nd Key:
+    <label for="A">A</label>
+    <input
+      type="radio"
+      id="9"
+      name="Key2"
+    />
+    <label for="B">B</label>
+    <input
+      type="radio"
+      id="11"
+      name="Key2"
+    />
+    <label for="C">C</label>
+    <input
+      type="radio"
+      id="0"
+      name="Key2"
+    />
+    <label for="D">D</label>
+    <input
+      type="radio"
+      id="2"
+      name="Key2"
+    />
+    <label for="E">E</label>
+    <input
+      type="radio"
+      id="4"
+      name="Key2"
+    />
+    <label for="F">F</label>
+    <input
+      type="radio"
+      id="5"
+      name="Key2"
+    />
+    <label for="G">G</label>
+    <input
+      type="radio"
+      id="7"
+      name="Key2"
+    />
+    </span>
+    <br>
+    Accidental: 
+    <label for="b">b</label>
+    <input
+      type="radio"
+      id="-1"
+      name="Key2Accidental"
+    />
+    <label for="♮">♮</label>
+    <input
+      type="radio"
+      id="0"
+      name="Key2Accidental"
+    />
+    <label for="#">#</label>
+    <input
+      type="radio"
+      id="1"
+      name="Key2Accidental"
+    />
+    <br>
+    Mode: 
+    <label for="Major">Major</label>
+    <input
+      type="radio"
+      id="Major"
+      name="Key2Mode"
+    />
+    <label for="Minor">Minor</label>
+    <input
+      type="radio"
+      id="Minor"
+      name="Key2Mode"
+    />
+    <br><br>
+    <input 
+        id="submitBtn" 
+        type="submit" 
+        value="Submit" 
+        onclick="sendData()" />
+
+    <div id="result">
+      <em> Your result will appear here!</em>
+    </div>
+    
+    <div id="boo"> </div>
+<script src="path-to-scripts/vexflow.min.js">
+VF = Vex.Flow;
+
+// Create an SVG renderer and attach it to the DIV element named "boo".
+var div = document.getElementById("boo")
+var renderer = new VF.Renderer(div, VF.Renderer.Backends.SVG);
+
+// Size our SVG:
+renderer.resize(500, 500);
+
+// And get a drawing context:
+var context = renderer.getContext();
+
+// Create a stave at position 10, 40 of width 400 on the canvas.
+var stave = new VF.Stave(10, 40, 400);
+
+// Add a clef and time signature.
+stave.addClef("treble").addTimeSignature("4/4");
+
+// Connect it to the rendering context and draw!
+stave.setContext(context).draw();
+
+</script>
+
+<script>
+
+
+function sendData() {
+let Key1,Key2,Key1Accidental,Key2Accidental,Key1Mode,Key2Mode;
+
+const rbs1 = document.querySelectorAll('input[name="Key1"]');
+for (const rb1 of rbs1) {
+                if (rb1.checked) {
+                    Key1 = rb1.id;
+                    break;
+                }
+            }
+            
+const rbs2 = document.querySelectorAll('input[name="Key1Accidental"]');            
+for (const rb2 of rbs2) {
+                if (rb2.checked) {
+                    Key1Accidental = rb2.id;
+                    break;
+                }
+            }
+ 
+const rbs3 = document.querySelectorAll('input[name="Key1Mode"]');            
+for (const rb3 of rbs3) {
+                if (rb3.checked) {
+                    Key1Mode = rb3.id;
+                    break;
+                }
+            }
+            
+const rbs4 = document.querySelectorAll('input[name="Key2"]');
+for (const rb4 of rbs4) {
+                if (rb4.checked) {
+                    Key2 = rb4.id;
+                    break;
+                }
+            }
+            
+const rbs5 = document.querySelectorAll('input[name="Key2Accidental"]');            
+for (const rb5 of rbs5) {
+                if (rb5.checked) {
+                    Key2Accidental = rb5.id;
+                    break;
+                }
+            }
+ 
+const rbs6 = document.querySelectorAll('input[name="Key2Mode"]');            
+for (const rb6 of rbs6) {
+                if (rb6.checked) {
+                    Key2Mode = rb6.id;
+                    break;
+                }
+            }
+            
+let updateLocation = document.querySelector('#result')
+
+/*function onFailure(error){
+    let warning = `<span style="color:red">${error}</span>`;
+    updateLocation.innerHTML = warning;
+};*/
+        
+function onSuccess(element){
+
+var output;
+var finalOutput=[];
+
+for(var z=0;z<4;z++)
+{
+  output=[];
+  for(var y=0;y<element.length;y++)
+  {
+   output.push(element[y][3-z]);
+  }
+  finalOutput.push(output.join("----"));
+}
+
+    let result = ` Your modulation sequence is: <br>${finalOutput.join("<br>")}`;
+    updateLocation.innerHTML = result;
+};
+
+
+var element=modulationEquation(Key1,Key1Accidental,Key1Mode,Key2,Key2Accidental,Key2Mode);  onSuccess(element);
+                 
+                 
+};
+</script>
+
+</body>
