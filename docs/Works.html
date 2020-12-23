@@ -171,21 +171,13 @@ for (const rb1 of rbs1) {
                 }
             }
             
-const rbs2 = document.querySelectorAll('option[name="Key1Accidental"]');            
-for (const rb2 of rbs2) {
-                if (rb2.checked) {
-                    Key1Accidental = rb2.id;
-                    break;
-                }
-            }
+var e= document.getElementById("Key1Accidental");
+Key1Accidental= e.value;
  
-const rbs3 = document.querySelectorAll('input[name="Key1Mode"]');            
-for (const rb3 of rbs3) {
-                if (rb3.checked) {
-                    Key1Mode = rb3.id;
-                    break;
-                }
-            }
+
+var e= document.getElementById("Key1Mode");
+Key1Mode= e.value;
+
             
 const rbs4 = document.querySelectorAll('input[name="Key2"]');
 for (const rb4 of rbs4) {
@@ -195,21 +187,13 @@ for (const rb4 of rbs4) {
                 }
             }
             
-const rbs5 = document.querySelectorAll('input[name="Key2Accidental"]');            
-for (const rb5 of rbs5) {
-                if (rb5.checked) {
-                    Key2Accidental = rb5.id;
-                    break;
-                }
-            }
+var e= document.getElementById("Key2Accidental");
+Key2Accidental= e.value;
  
-const rbs6 = document.querySelectorAll('input[name="Key2Mode"]');            
-for (const rb6 of rbs6) {
-                if (rb6.checked) {
-                    Key2Mode = rb6.id;
-                    break;
-                }
-            }
+
+var e= document.getElementById("Key2Mode");
+Key2Mode= e.value;
+  
             
 let updateLocation = document.querySelector('#result')
 
