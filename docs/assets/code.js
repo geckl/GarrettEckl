@@ -48,7 +48,7 @@ function pcToName(chord){
   
   for(var i=0;i<chord.length;i++)
   {
-    Logger.log(chord[i]);
+    //Logger.log(chord[i]);
     
     switch(chord[i]){
         
