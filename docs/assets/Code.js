@@ -7,7 +7,7 @@ let chords2= [];
 var modulationSequence= [];
 
 /*function doGet() {
-  return HtmlService.createHtmlOutputFromFile('Index')
+  return HtmlService.createHtmlOutputFromFile('../ModulationEquation')
                     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 };*/
 
