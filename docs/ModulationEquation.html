@@ -2,7 +2,7 @@
 <html>
   <head>
     <base target="_top" />
-    
+    <script type="text/javascript" src="assets/code.js"></script>
   </head>
   <body>
     <h2>The Modulation Equation</h2>
@@ -262,9 +262,9 @@ for(var z=0;z<4;z++)
     updateLocation.innerHTML = result;
 };
 
-google.script.run.withFailureHandler(onFailure)
-                 .withSuccessHandler(onSuccess)
-                 .modulationEquation(Key1,Key1Accidental,Key1Mode,Key2,Key2Accidental,Key2Mode);
+//withFailureHandler(onFailure)
+//withSuccessHandler(onSuccess)
+withSuccessHandler(modulationEquation(Key1,Key1Accidental,Key1Mode,Key2,Key2Accidental,Key2Mode));
                  
 };
 </script>
