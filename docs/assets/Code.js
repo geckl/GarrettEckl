@@ -2,9 +2,7 @@
   * Sets up server-side HTML environment
   */
 
-let chords1= [];
-let chords2= [];
-var modulationSequence= [];
+
 
 /*function doGet() {
   return HtmlService.createHtmlOutputFromFile('../ModulationEquation')
@@ -223,11 +221,14 @@ function germanChord(tonicNote){
 
 function modulationEquation(Key1,Key1Accidental,Key1Mode,Key2,Key2Accidental,Key2Mode){
  
+ let chords1= [];
+ let chords2= [];
+ let modulationSequence= [];
  var tonicNote1= octave(parseInt(Key1)+parseInt(Key1Accidental));
  var tonicNote2= octave(parseInt(Key2)+parseInt(Key2Accidental));
  
- var chords1= createChords(tonicNote1,Key1Mode); 
- var chords2= createChords(tonicNote2,Key2Mode);
+ chords1= createChords(tonicNote1,Key1Mode); 
+ chords2= createChords(tonicNote2,Key2Mode);
  
   
 
