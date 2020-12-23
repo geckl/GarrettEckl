@@ -17,52 +17,20 @@ layout: default
     <h2>The Modulation Equation</h2>
     <label> Enter two keys and click submit. </label><br>
     <div id="buttons">
-    1st Key:
-    <br><label for="A">A</label>
-    <input
-      type="radio"
-      id="9"
-      name="Key1"
-    /><br>
-    <label for="B">B</label>
-    <input
-      type="radio"
-      id="11"
-      name="Key1"
-    /><br>
-    <label for="C">C</label>
-    <input
-      type="radio"
-      id="0"
-      name="Key1"
-    /><br>
-    <label for="D">D</label>
-    <input
-      type="radio"
-      id="2"
-      name="Key1"
-    /><br>
-    <label for="E">E</label>
-    <input
-      type="radio"
-      id="4"
-      name="Key1"
-    /><br>
-    <label for="F">F</label>
-    <input
-      type="radio"
-      id="5"
-      name="Key1"
-    /><br>
-    <label for="G">G</label>
-    <input
-      type="radio"
-      id="7"
-      name="Key1"
-    />
-    </div><br>
-    
-    <div id="buttons2"> 
+    <label for="Key">1st Key:</label>
+    <select id="Key1">
+   
+    <option value="0" name="Key1"/>C</option>
+    <option value="2" name="Key1"/>D</option>
+    <option value="4" name="Key1"/>E</option>
+    <option value="5" name="Key1"/>F</option>
+    <option value="7" name="Key1"/>G</option>
+    <option value="9" name="Key1"/>A</option>
+    <option value="11" name="Key1"/>B</option>
+
+    </select> 
+    <br>
+
     <label for="Key1Accidental">Accidental:</label>
     <select id="Key1Accidental">
    
@@ -82,53 +50,21 @@ layout: default
     </select> 
 
   </div>
+
   <div id="buttons">
-    2nd Key:
-    <br><label for="A">A</label>
-    <input
-      type="radio"
-      id="9"
-      name="Key2"
-    /><br>
-    <label for="B">B</label>
-    <input
-      type="radio"
-      id="11"
-      name="Key2"
-    /><br>
-    <label for="C">C</label>
-    <input
-      type="radio"
-      id="0"
-      name="Key2"
-    /><br>
-    <label for="D">D</label>
-    <input
-      type="radio"
-      id="2"
-      name="Key2"
-    /><br>
-    <label for="E">E</label>
-    <input
-      type="radio"
-      id="4"
-      name="Key2"
-    /><br>
-    <label for="F">F</label>
-    <input
-      type="radio"
-      id="5"
-      name="Key2"
-    /><br>
-    <label for="G">G</label>
-    <input
-      type="radio"
-      id="7"
-      name="Key2"
-    />
-    </div><br>
+  <label for="Key">2nd Key:</label>
+    <select id="Key2">
+   
+    <option value="0" name="Key2"/>C</option>
+    <option value="2" name="Key2"/>D</option>
+    <option value="4" name="Key2"/>E</option>
+    <option value="5" name="Key2"/>F</option>
+    <option value="7" name="Key2"/>G</option>
+    <option value="9" name="Key2"/>A</option>
+    <option value="11" name="Key2"/>B</option>
+
+    </select> 
     
-    <div id="buttons2"> 
     <label for="Key2Accidental">Accidental:</label>
     <select id="Key2Accidental">
    
@@ -166,35 +102,25 @@ layout: default
 function sendData() {
 let Key1,Key2,Key1Accidental,Key2Accidental,Key1Mode,Key2Mode;
 
-const rbs1 = document.querySelectorAll('input[name="Key1"]');
-for (const rb1 of rbs1) {
-                if (rb1.checked) {
-                    Key1 = rb1.id;
-                    break;
-                }
-            }
-            
-var e= document.getElementById("Key1Accidental");
+let e;
+e= document.getElementById("Key1");
+Key1= e.value;
+  
+e= document.getElementById("Key1Accidental");
 Key1Accidental= e.value;
- 
 
-var e= document.getElementById("Key1Mode");
+e= document.getElementById("Key1Mode");
 Key1Mode= e.value;
 
             
-const rbs4 = document.querySelectorAll('input[name="Key2"]');
-for (const rb4 of rbs4) {
-                if (rb4.checked) {
-                    Key2 = rb4.id;
-                    break;
-                }
-            }
-            
-var e= document.getElementById("Key2Accidental");
+e= document.getElementById("Key2");
+Key2= e.value;
+  
+e= document.getElementById("Key2Accidental");
 Key2Accidental= e.value;
  
 
-var e= document.getElementById("Key2Mode");
+e= document.getElementById("Key2Mode");
 Key2Mode= e.value;
   
             
