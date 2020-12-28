@@ -265,7 +265,7 @@ else if(pivotChord(chords1,chords2) != 100)
 
    if(chords1[pivot][0]==chords2[4][0])
      {
-      modulationSequence.push(pcToName(chords2[5]));
+      modulationSequence.push(pcToName(chords2[4]));
      }
 
    modulationSequence.push(pcToName(chords2[0]));
