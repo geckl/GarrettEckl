@@ -261,7 +261,7 @@ else if(pivotChord(chords1,chords2) != 100)
 {
    var pivot= pivotChord(chords1,chords2);
    modulationSequence.push(pcToName(chords1[0]));
-   modulationSequence.push(pcToName(chords1[pivot]);
+   modulationSequence.push(pcToName(chords1[pivot]));
 
    if(chords1[pivot][0]==chords2[4][0])
      {
