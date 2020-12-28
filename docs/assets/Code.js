@@ -259,11 +259,11 @@ function modulationEquation(Key1,Key1Accidental,Key1Mode,Key2,Key2Accidental,Key
  
 else if(pivotChord(chords1,chords2) != 100)
 {
-   var pivotChord= pivotChord(chords1,chords2);
+   var pivot= pivotChord(chords1,chords2);
    modulationSequence.push(pcToName(chords1[0]));
-   modulationSequence.push(pcToName(chords1[pivotChord]);
+   modulationSequence.push(pcToName(chords1[pivot]);
 
-   if(chords1[pivotChord][0]==chords2[4][0])
+   if(chords1[pivot][0]==chords2[4][0])
      {
       modulationSequence.push(pcToName(chords2[5]));
      }
