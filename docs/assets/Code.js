@@ -257,12 +257,20 @@ function modulationEquation(Key1,Key1Accidental,Key1Mode,Key2,Key2Accidental,Key
    modulationSequence.push(pcToName(chords2[0]));
  }
  
- else if(pivotChord(chords1,chords2) != 100)
+else if(pivotChord(chords1,chords2) != 100)
 {
+   var pivotChord= pivotChord(chords1,chords2);
    modulationSequence.push(pcToName(chords1[0]));
-   modulationSequence.push(pcToName(chords1[pivotChord(chords1,chords2)]));
+   modulationSequence.push(pcToName(chords1[pivotChord]);
+
+   if(chords1[pivotChord][0]==chords2[4][0])
+     {
+      modulationSequence.push(pcToName(chords2[5]));
+     }
+
    modulationSequence.push(pcToName(chords2[0]));
 }
+
   
  else
  {
