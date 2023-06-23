@@ -1,0 +1,19 @@
+{
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true,
+        "source.sortMembers": true
+    },
+    "terminal.integrated.profiles.osx": {
+        "zsh": {
+            "path": "/bin/zsh -l",
+            "args": ["-l"]
+        }
+    },
+    "terminal.integrated.automationProfile.osx": {
+        "path": "/bin/zsh"
+    },
+    "jest.jestCommandLine": "yarn test",
+    "cmake.configureOnOpen": false
+}
