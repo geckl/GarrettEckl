@@ -1,7 +1,7 @@
-import React from "react";
-import { TopBar } from "../Components/TopBar/TopBar";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
 import ecklImage from "../Assets/Eckl.jpg";
+import { Tile } from "../Components/Landing/Tile";
+import { TopBar } from "../Components/TopBar/TopBar";
 
 export const Landing = () => {
     return (
@@ -17,6 +17,20 @@ export const Landing = () => {
                 bgSize={"cover"}
             >
                 <TopBar />
+                <SimpleGrid columns={6} spacing={2} w="100%" h="100%">
+                    <Tile />
+                    <Tile />
+                    <Tile />
+                    <Tile />
+                    <Tile />
+                    <Tile />
+                    <Tile />
+                    <Tile />
+                    <Tile />
+                    <Tile />
+                    <Tile />
+                    <Tile />
+                </SimpleGrid>
             </Flex>
         </Box>
     );
