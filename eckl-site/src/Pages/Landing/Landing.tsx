@@ -1,7 +1,7 @@
 import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
-import ecklImage from "../Assets/Eckl.jpg";
-import { Tile } from "../Components/Landing/Tile";
-import { TopBar } from "../Components/TopBar/TopBar";
+import ecklImage from "../../Assets/Images/Eckl.jpg";
+import { TopBar } from "../../Components/TopBar/TopBar";
+import { Tile } from "./Tile";
 
 export const Landing = () => {
     return (

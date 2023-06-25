@@ -1,23 +1,20 @@
-import { GridItem, IconButton, SimpleGrid } from "@chakra-ui/react";
-import { FaBars } from "react-icons/fa";
+import { GridItem, Image, SimpleGrid } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
+import headerImage from "../../Assets/Images/Header.png";
+import { SideDrawer } from "../Drawer/SideDrawer";
 
 export const TopBar = () => {
+  const navigate = useNavigate();
   return (
-    <SimpleGrid columns={3} width="100%" mb={".5em"}>
-      <GridItem>
-        <IconButton
-          aria-label="side bar"
-          icon={<FaBars />}
-          variant="bugaboo"
-        ></IconButton>
-      </GridItem>
-      <GridItem colStart={2} colEnd={3}>
-        {/* <Image
-                    src={useAltLogo ? riffitLogoBlack : riffitLogoWhite}
-                    variant="riffitLogo"
-                /> */}
-      </GridItem>
-      {/* <GridItem>Placeholder</GridItem> */}
-    </SimpleGrid>
+    <>
+      <SimpleGrid columns={3} width="100%" maxH={"5em"} mb={".5em"}>
+        <GridItem>
+          <SideDrawer isMobile={false} />
+        </GridItem>
+        <GridItem align="center" justify="center">
+          <Image src={headerImage} h={"5em"} _hover={{ cursor: "pointer" }} onClick={() => { navigate("/") }} ></Image>
+        </GridItem>
+      </SimpleGrid>
+    </>
   );
 };

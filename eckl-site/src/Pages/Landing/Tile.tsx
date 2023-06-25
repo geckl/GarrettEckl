@@ -1,4 +1,4 @@
-import { Center, GridItem } from "@chakra-ui/react";
+import { Center, GridItem, ScaleFade } from "@chakra-ui/react";
 import { useState } from "react";
 
 export const Tile = () => {
@@ -14,10 +14,12 @@ export const Tile = () => {
     };
 
     return (
-        <GridItem bg="red" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} opacity={isHovering ? 1 : 0}>
-            <Center h='100%'>
-                Test
-            </Center>
+        <GridItem bg="red" opacity={isHovering ? 1 : 0}>
+            <ScaleFade in={isHovering}>
+                <Center h='100%'>
+                    Test
+                </Center>
+            </ScaleFade>
         </GridItem>
     )
 }
