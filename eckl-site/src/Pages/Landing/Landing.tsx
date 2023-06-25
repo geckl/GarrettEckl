@@ -1,5 +1,5 @@
 import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
-import ecklImage from "../../Assets/Images/Eckl.jpg";
+import ecklImage from "../../Assets/Images/Eckl2.jpg";
 import { TopBar } from "../../Components/TopBar/TopBar";
 import { Tile } from "./Tile";
 
@@ -13,8 +13,19 @@ export const Landing = () => {
                 minW={340}
                 flexDirection={"column"}
                 alignItems={"center"}
-                background={`linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.25)), url(${ecklImage})`}
-                bgSize={"cover"}
+                _before={{
+                    content: '""',
+                    pos: "absolute",
+                    top: 0,
+                    right: 0,
+                    left: 0,
+                    bottom: 0,
+                    bgImage: ecklImage,
+                    opacity: 0.25,
+                    bgSize: "cover",
+                    bgPosition: "bottom",
+                    zIndex: -1,
+                }}
             >
                 <TopBar />
                 <SimpleGrid columns={6} spacing={2} w="100%" h="100%">
@@ -32,6 +43,6 @@ export const Landing = () => {
                     <Tile />
                 </SimpleGrid>
             </Flex>
-        </Box>
+        </Box >
     );
 };

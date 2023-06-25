@@ -52,6 +52,7 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
                                 <a href={ecklCV}><Button w="250px">CV</Button></a>
                                 <Button w="250px" onClick={() => { navigate("/squatch-sounds") }}>Squatch Sounds</Button>
                                 <a href="https://www.yournameheremusic.com/" target="_blank" rel="noreferrer" ><Button w="250px">Your Name Here</Button></a>
+                                <a href="https://class.garretteckl.com/" ><Button w="250px">Class Portal</Button></a>
                                 <Spacer />
                                 <VStack w="100%" justifyContent={"center"}>
                                     <HStack w="100%" justifyContent={"center"}>

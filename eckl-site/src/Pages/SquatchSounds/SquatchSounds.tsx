@@ -1,8 +1,8 @@
-import { Box, Flex, HStack, Heading, Image, Spacer, Tab, TabList, TabPanel, TabPanels, Tabs, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, HStack, Image, Spacer, Tab, TabList, TabPanel, TabPanels, Tabs, Text, VStack } from "@chakra-ui/react";
 import humanizerAU from "../../Assets/Files/Real Time Humanizer.component.zip";
 import humanizerVST3 from "../../Assets/Files/Real Time Humanizer.vst3.zip";
 import ezdspImage from "../../Assets/Images/EZDSP.png";
-import ecklImage from "../../Assets/Images/Eckl.jpg";
+import ecklImage from "../../Assets/Images/Eckl2.jpg";
 import humanizerImage from "../../Assets/Images/RTHumanizer.png";
 import { TopBar } from "../../Components/TopBar/TopBar";
 
@@ -17,13 +17,25 @@ export const SquatchSounds = () => {
                 minW={340}
                 flexDirection={"column"}
                 alignItems={"center"}
-                background={`linear-gradient(rgba(255,255,255,.15), rgba(255,255,255,.15)), url(${ecklImage})`}
-                bgSize={"cover"}
+                _before={{
+                    content: '""',
+                    pos: "absolute",
+                    top: 0,
+                    right: 0,
+                    left: 0,
+                    bottom: 0,
+                    bgImage: ecklImage,
+                    opacity: 0.15,
+                    bgSize: "cover",
+                    bgPosition: "bottom",
+                    zIndex: -1,
+                }}
             >
                 <TopBar />
-                <Box w="80%" h="95%" bg="black" borderRadius={10} p={5} color="white" >
-                    <Heading align="center">Squatch Sounds</Heading>
-                    <Text>"Squatch Sounds is an audio software company founded by Garrett Eckl. Focused on innovation and accessibility, Squatch Sounds software includes cutting edge DSP programs, workflow tools, and educational software."</Text>
+                <Box w="80%" h="85%" bg="black" borderRadius={10} p={5} color="white" overflow={"scroll"}>
+                    <Text align="center" fontSize={"3xl"}>Squatch Sounds</Text>
+                    <Spacer h={15} />
+                    <Text align="center">"Squatch Sounds is an audio software company founded by Garrett Eckl. Focused on innovation and accessibility, Squatch Sounds software includes cutting edge DSP programs, workflow tools, and educational software."</Text>
                     <Tabs>
                         <TabList>
                             <Tab>EZDSP</Tab>
@@ -33,15 +45,14 @@ export const SquatchSounds = () => {
 
                         <TabPanels h={"100%"}>
                             <TabPanel minH={400}>
-                                <HStack w={"100%"} h={"100%"}>
-                                    <VStack w={350} h={"100%"}>
+                                <HStack w={"auto"} minW={350} h={"100%"}>
+                                    <VStack w={"50%"} h={"100%"}>
                                         <a href="https://geckl.github.io/EZDSP/"><Image src={ezdspImage} h={400} alt="EZDSP" /></a>
                                     </VStack>
-                                    <Spacer />
-                                    <VStack w={350} h={"100%"}>
+                                    <VStack w={"50%"} h={"100%"}>
                                         <Text as='i' h={150}>EZDSP is an audio plug-in that lets you edit the plug-in's DSP source code from directly within your favorite DAW. See the <u><a href="https://geckl.github.io/EZDSP/" target="_blank" rel="noreferrer" >EZDSP Homepage</a></u> for more information.</Text>
                                         <Spacer />
-                                        <Text as='b'>Download:</Text>
+                                        <Text as='b'>Download EZDSP:</Text>
                                         <HStack>
                                             <u><a href="https://geckl.github.io/EZDSP/Download">AU</a></u>
                                             <Spacer />
@@ -51,15 +62,14 @@ export const SquatchSounds = () => {
                                 </HStack>
                             </TabPanel>
                             <TabPanel minH={400}>
-                                <HStack w={"100%"} h={"100%"}>
-                                    <VStack w={350} h={"100%"}>
+                                <HStack w={"auto"} minW={350} h={"100%"}>
+                                    <VStack w={"50%"} h={"100%"}>
                                         <a href="https://geckl.github.io/EZDSP/"><Image src={humanizerImage} h={400} alt="Real Time Humanizer" /></a>
                                     </VStack>
-                                    <Spacer />
-                                    <VStack w={350} h={"100%"}>
+                                    <VStack w={"50%"} h={"100%"}>
                                         <Text as='i' h={150}>Randomize the timing and velocities of your MIDI notes in real-time, or add beat emphasization. This plug-in allows you to customize MIDI performances without permanently modifying the MIDI file.</Text>
                                         <Spacer />
-                                        <Text as='b'>Download:</Text>
+                                        <Text as='b'>Download Real Time Humanizer:</Text>
                                         <HStack>
                                             <u><a href={humanizerAU}>AU</a></u>
                                             <Spacer />
