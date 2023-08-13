@@ -9,14 +9,15 @@ const overrides = {
   styles: {
     global: {
       body: {
-        fontFamily: "sans-serif",
+        fontFamily: "monospace",
         backgroundColor: "#404345",
+        fontSize: "1.2em",
       },
       a: {
-        fontFamily: "sans-serif",
+        fontFamily: "monospace",
       },
       p: {
-        fontFamily: "sans-serif",
+        fontFamily: "monospace",
       },
     },
   },
@@ -77,7 +78,7 @@ const overrides = {
     },
     Text: {
       baseStyle: {
-        fontFamily: "sans-serif",
+        fontFamily: "monospace",
       },
       variants: {
         secondary: {

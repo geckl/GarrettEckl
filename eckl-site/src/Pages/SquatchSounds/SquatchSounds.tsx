@@ -35,7 +35,7 @@ export const SquatchSounds = () => {
                 <Box w="80%" h="85%" bg="black" borderRadius={10} p={5} color="white" overflow={"scroll"}>
                     <Text align="center" fontSize={"3xl"}>Squatch Sounds</Text>
                     <Spacer h={15} />
-                    <Text align="center">"Squatch Sounds is an audio software company founded by Garrett Eckl. Focused on innovation and accessibility, Squatch Sounds software includes cutting edge DSP programs, workflow tools, and educational software."</Text>
+                    <Text align="center">"Squatch Sounds is an audio software company founded by Garrett Eckl. Focused on innovation and accessibility, Squatch Sounds software includes cutting edge DSP programs, workflow tools, and educational software."</Text><br />
                     <Tabs>
                         <TabList>
                             <Tab>EZDSP</Tab>
