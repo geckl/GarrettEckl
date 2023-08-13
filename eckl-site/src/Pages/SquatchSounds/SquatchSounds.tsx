@@ -14,9 +14,9 @@ export const SquatchSounds = () => {
         <Box h={"100vh"} minH={"100vh"} w={"100vw"} minW={"100vw"}>
             <Flex
                 w={"100%"}
-                h={"95%"}
-                minH={350}
-                minW={340}
+                h={"inherit"}
+                // minH={350}
+                // minW={340}
                 flexDirection={"column"}
                 alignItems={"center"}
                 _before={{
@@ -34,25 +34,25 @@ export const SquatchSounds = () => {
                 }}
             >
                 <TopBar />
-                <Box w={isMobile ? "100%" : "80%"} h="85%" bg="black" borderRadius={10} p={5} color="white" overflow={"scroll"}>
+                <Box w={isMobile ? "100%" : "80%"} h="75%" bg="black" borderRadius={10} p={5} color="white" overflow={"scroll"}>
                     <Text align="center" fontSize={"3xl"}>Squatch Sounds</Text>
                     <Spacer h={15} />
                     <Text align="center">"Squatch Sounds is an audio software company founded by Garrett Eckl. Focused on innovation and accessibility, Squatch Sounds software includes cutting edge DSP programs, workflow tools, and educational software."</Text><br />
                     <Tabs>
                         <TabList>
-                            <Tab fontSize={"2xl"}>EZDSP</Tab>
-                            <Tab fontSize={"2xl"}>Real Time Humanizer</Tab>
-                            <Tab fontSize={"2xl"}>Coming Soon</Tab>
+                            <Tab >EZDSP</Tab>
+                            <Tab >Real Time Humanizer</Tab>
+                            <Tab >Coming Soon</Tab>
                         </TabList>
 
                         <TabPanels h={"100%"}>
                             <TabPanel minH={400}>
-                                <HStack w={"auto"} minW={350} h={"100%"}>
+                                <HStack w={"auto"} h={"100%"}>
                                     <VStack w={"50%"} h={"100%"}>
-                                        <a href="https://geckl.github.io/EZDSP/"><Image src={ezdspImage} h={400} alt="EZDSP" /></a>
+                                        <a href="https://geckl.github.io/EZDSP/"><Image src={ezdspImage} alt="EZDSP" /></a>
                                     </VStack>
-                                    <VStack w={"50%"} h={"100%"}>
-                                        <Text as='i' h={150}>EZDSP is an audio plug-in that lets you edit the plug-in's DSP source code from directly within your favorite DAW. See the <u><a href="https://geckl.github.io/EZDSP/" target="_blank" rel="noreferrer" >EZDSP Homepage</a></u> for more information.</Text>
+                                    <VStack w={"50%"} h={"100%"} >
+                                        <Text as='i' >EZDSP is an audio plug-in that lets you edit the plug-in's DSP source code from directly within your favorite DAW. See the <u><a href="https://geckl.github.io/EZDSP/" target="_blank" rel="noreferrer" >EZDSP Homepage</a></u> for more information.</Text>
                                         <Spacer />
                                         <Text as='b'>Download EZDSP:</Text>
                                         <HStack>
@@ -64,12 +64,12 @@ export const SquatchSounds = () => {
                                 </HStack>
                             </TabPanel>
                             <TabPanel minH={400}>
-                                <HStack w={"auto"} minW={350} h={"100%"}>
+                                <HStack w={"auto"} h={"100%"}>
                                     <VStack w={"50%"} h={"100%"}>
-                                        <a href="https://geckl.github.io/EZDSP/"><Image src={humanizerImage} h={400} alt="Real Time Humanizer" /></a>
+                                        <a href="https://geckl.github.io/EZDSP/"><Image src={humanizerImage} alt="Real Time Humanizer" /></a>
                                     </VStack>
                                     <VStack w={"50%"} h={"100%"}>
-                                        <Text as='i' h={150}>Randomize the timing and velocities of your MIDI notes in real-time, or add beat emphasization. This plug-in allows you to customize MIDI performances without permanently modifying the MIDI file.</Text>
+                                        <Text as='i'>Randomize the timing and velocities of your MIDI notes in real-time, or add beat emphasization. This plug-in allows you to customize MIDI performances without permanently modifying the MIDI file.</Text>
                                         <Spacer />
                                         <Text as='b'>Download Real Time Humanizer:</Text>
                                         <HStack>

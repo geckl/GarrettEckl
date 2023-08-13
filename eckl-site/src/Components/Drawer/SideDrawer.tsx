@@ -18,11 +18,13 @@ import {
 import { FaBars, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import ecklCV from "../../Assets/Images/GarrettEckl_OnlineResume.pdf";
+import { useIsMobile } from "../../utils";
 
 export const SideDrawer = (props: { isMobile: boolean }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const navigate = useNavigate();
     const toast = useToast();
+    const isMobile = useIsMobile();
 
     const openInNewTab = (url: string) => {
         window.open(url, "_blank", "noreferrer");
@@ -32,13 +34,10 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
         <>
             <IconButton
                 aria-label="side bar"
-                icon={<FaBars />}
+                icon={<FaBars size={25} />}
                 variant="player"
                 m={2}
-                //size={props.isMobile ? "xl" : "lg"}
-                height={props.isMobile ? "75%" : "50px"}
                 aspectRatio={1 / 1}
-                //height={"100%"}
                 borderRadius={10}
                 onClick={onOpen}
             ></IconButton>
@@ -46,29 +45,42 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
                 <Drawer
                     isOpen={isOpen}
                     placement="left"
-                    size={props.isMobile ? "full" : "xs"}
+                    //size={props.isMobile ? "full" : "xs"}
                     onClose={onClose}
                 >
                     <DrawerOverlay />
-                    <DrawerContent>
-                        <DrawerCloseButton w={50} h={50} />
-                        <DrawerHeader fontSize={props.isMobile ? "xxx-large" : "large"}>
+                    <DrawerContent overflow="scroll">
+                        <DrawerCloseButton bgColor={"#d87559"} />
+                        <DrawerHeader >
                             Welcome to my site{" "}
                         </DrawerHeader>
                         <Spacer maxH={"50px"} />
                         <DrawerBody pt={0} pb={2}>
                             <VStack minH={"100%"}>
 
-                                <Button w="80%" h={props.isMobile ? "100px" : "50px"} fontSize={props.isMobile ? "xxx-large" : "large"} onClick={() => { navigate("/about") }}>About Me</Button>
-                                <Button w="80%" h={props.isMobile ? "100px" : "50px"} fontSize={props.isMobile ? "xxx-large" : "large"} onClick={() => {
+                                <Button w="80%" onClick={() => {
+                                    onClose();
+                                    navigate("/about");
+                                }
+                                }>About Me</Button>
+                                <Button w="80%" onClick={() => {
+                                    onClose();
                                     openInNewTab(ecklCV);
                                 }}>CV</Button>
-                                <Button w="80%" h={props.isMobile ? "100px" : "50px"} fontSize={props.isMobile ? "xxx-large" : "large"} onClick={() => { navigate("/squatch-sounds") }}>Squatch Sounds</Button>
-                                <Button w="80%" h={props.isMobile ? "100px" : "50px"} fontSize={props.isMobile ? "xxx-large" : "large"} onClick={() => {
+                                <Button w="80%" onClick={() => {
+                                    onClose();
+                                    navigate("/squatch-sounds");
+                                }}>Squatch Sounds</Button>
+                                <Button w="80%" onClick={() => {
+                                    onClose();
                                     openInNewTab("https://www.yournameheremusic.com/");
                                 }}>Your Name Here</Button>
+                                <Button w="80%" fontSize={"sm"} onClick={() => {
+                                    onClose();
+                                    openInNewTab("https://app.songr.ai/");
+                                }}>Make a song in 3 clicks!</Button>
                                 {/* <a href="https://class.garretteckl.com/" ><Button w="250px">Class Portal</Button></a> */}
-                                <Button w="80%" h={props.isMobile ? "100px" : "50px"} fontSize={props.isMobile ? "xxx-large" : "large"} onClick={() => {
+                                <Button w="80%" onClick={() => {
                                     toast({
                                         title: "Coming soon!",
                                         description: `Present me with the secret password "Orangutan" in class for extra credit. Extra extra credit if you randomly yell it out`,
@@ -77,7 +89,7 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
                                         isClosable: true
                                     });
                                 }}>Class Portal</Button>
-                                <Spacer />
+                                {/* <Spacer /> */}
                                 <VStack w="100%" justifyContent={"center"}>
                                     <HStack w="100%" justifyContent={"center"}>
                                         <Link
@@ -121,7 +133,7 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
                                         <Link
                                             w={"100%"}
                                             align="center"
-                                            color="red"
+                                            color="#d87559"
                                             fontFamily={"Sofia Pro"}
                                             isExternal
                                         >

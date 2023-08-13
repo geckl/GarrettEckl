@@ -3,6 +3,7 @@ import { KeyboardShortcuts, MidiNumbers, Piano } from 'react-piano';
 import 'react-piano/dist/styles.css';
 import ecklImage from "../../Assets/Images/Eckl2.jpg";
 import { TopBar } from "../../Components/TopBar/TopBar";
+import { useIsMobile } from "../../utils";
 import SoundfontProvider from "./SoundfontProvider";
 
 const audioContext = new (window.AudioContext)();
@@ -29,22 +30,23 @@ const CUSTOM_KEYS = [
     { natural: "'", flat: 'v', sharp: 'b' },
     { natural: "\\", flat: ']', sharp: 'z' },
 ];
-const keyboardShortcuts = KeyboardShortcuts.create({
-    firstNote: firstNote,
-    lastNote: lastNote,
-    keyboardConfig: CUSTOM_KEYS,
-});
 
 
 export const Landing = () => {
+
+    const isMobile = useIsMobile();
+
+    const keyboardShortcuts = KeyboardShortcuts.create({
+        firstNote: firstNote,
+        lastNote: lastNote,
+        keyboardConfig: !isMobile && CUSTOM_KEYS,
+    });
 
     return (
         <Box h={"100vh"} minH={"100vh"} w={"100vw"} minW={"100vw"}>
             <Flex
                 w={"100%"}
-                h={"95%"}
-                minH={350}
-                minW={340}
+                h={"inherit"}
                 flexDirection={"column"}
                 alignItems={"center"}
                 _before={{
@@ -62,8 +64,8 @@ export const Landing = () => {
                 }}
             >
                 <TopBar />
-                <Spacer h={"calc(100vh - 450)"} />
-                <Box w="80%" h={300} bg="black" borderRadius={10} p={5} color="white" overflow={"scroll"}>
+                <Spacer />
+                <Box w="80%" aspectRatio={2 / 1} maxH={300} bg="black" borderRadius={10} p={5} color="white" overflow={"scroll"}>
                     <SoundfontProvider
                         instrumentName="acoustic_grand_piano"
                         audioContext={audioContext}

@@ -14,7 +14,7 @@ export const Tile = () => {
     };
 
     return (
-        <GridItem bg="red" opacity={isHovering ? 1 : 0}>
+        <GridItem bg="#d87559" opacity={isHovering ? 1 : 0}>
             <ScaleFade in={isHovering}>
                 <Center h='100%'>
                     Test
