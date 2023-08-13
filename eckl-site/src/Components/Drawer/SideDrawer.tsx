@@ -104,16 +104,17 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
                                             ></IconButton>
                                         </Link>
                                     </HStack>
-                                    <Link
-                                        href="https://www.garretteckl.com"
-                                        w={"100%"}
-                                        align="center"
-                                        color="red"
-                                        fontFamily={"Sofia Pro"}
-                                        isExternal
-                                    >
-                                        www.garretteckl.com
-                                    </Link>
+                                    <a href="mailto:garrettecklmusic@gmail.com">
+                                        <Link
+                                            w={"100%"}
+                                            align="center"
+                                            color="red"
+                                            fontFamily={"Sofia Pro"}
+                                            isExternal
+                                        >
+                                            garrettecklmusic@gmail.com
+                                        </Link>
+                                    </a>
 
 
                                 </VStack>
