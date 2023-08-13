@@ -24,6 +24,10 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
     const navigate = useNavigate();
     const toast = useToast();
 
+    const openInNewTab = (url: string) => {
+        window.open(url, "_blank", "noreferrer");
+    };
+
     return (
         <>
             <IconButton
@@ -31,6 +35,10 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
                 icon={<FaBars />}
                 variant="player"
                 m={2}
+                //size={props.isMobile ? "xl" : "lg"}
+                //height={props.isMobile ? "100%" : "50px"}
+                aspectRatio={1 / 1}
+                height={"100%"}
                 borderRadius={5}
                 onClick={onOpen}
             ></IconButton>
@@ -38,24 +46,29 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
                 <Drawer
                     isOpen={isOpen}
                     placement="left"
-                    //size={props.isMobile ? "full" : "xs"}
+                    size={props.isMobile ? "full" : "xs"}
                     onClose={onClose}
                 >
                     <DrawerOverlay />
                     <DrawerContent>
                         <DrawerCloseButton />
-                        <DrawerHeader>
+                        <DrawerHeader fontSize={props.isMobile ? "xxx-large" : "large"}>
                             Welcome to my site{" "}
                         </DrawerHeader>
+                        <Spacer maxH={"50px"} />
                         <DrawerBody pt={0} pb={2}>
                             <VStack minH={"100%"}>
 
-                                <Button w="250px" onClick={() => { navigate("/about") }}>About Me</Button>
-                                <a href={ecklCV}><Button w="250px">CV</Button></a>
-                                <Button w="250px" onClick={() => { navigate("/squatch-sounds") }}>Squatch Sounds</Button>
-                                <a href="https://www.yournameheremusic.com/" target="_blank" rel="noreferrer" ><Button w="250px">Your Name Here</Button></a>
+                                <Button w="80%" h={props.isMobile ? "100px" : "50px"} fontSize={props.isMobile ? "xxx-large" : "large"} onClick={() => { navigate("/about") }}>About Me</Button>
+                                <Button w="80%" h={props.isMobile ? "100px" : "50px"} fontSize={props.isMobile ? "xxx-large" : "large"} onClick={() => {
+                                    openInNewTab(ecklCV);
+                                }}>CV</Button>
+                                <Button w="80%" h={props.isMobile ? "100px" : "50px"} fontSize={props.isMobile ? "xxx-large" : "large"} onClick={() => { navigate("/squatch-sounds") }}>Squatch Sounds</Button>
+                                <Button w="80%" h={props.isMobile ? "100px" : "50px"} fontSize={props.isMobile ? "xxx-large" : "large"} onClick={() => {
+                                    openInNewTab("https://www.yournameheremusic.com/");
+                                }}>Your Name Here</Button>
                                 {/* <a href="https://class.garretteckl.com/" ><Button w="250px">Class Portal</Button></a> */}
-                                <Button w="250px" onClick={() => {
+                                <Button w="80%" h={props.isMobile ? "100px" : "50px"} fontSize={props.isMobile ? "xxx-large" : "large"} onClick={() => {
                                     toast({
                                         title: "Coming soon!",
                                         description: `Present me with the secret password "Orangutan" in class for extra credit. Extra extra credit if you randomly yell it out`,
