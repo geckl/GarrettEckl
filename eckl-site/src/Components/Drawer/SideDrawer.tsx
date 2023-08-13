@@ -36,10 +36,10 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
                 variant="player"
                 m={2}
                 //size={props.isMobile ? "xl" : "lg"}
-                //height={props.isMobile ? "100%" : "50px"}
+                height={props.isMobile ? "75%" : "50px"}
                 aspectRatio={1 / 1}
-                height={"100%"}
-                borderRadius={5}
+                //height={"100%"}
+                borderRadius={10}
                 onClick={onOpen}
             ></IconButton>
             <Box w="100%">
@@ -51,7 +51,7 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
                 >
                     <DrawerOverlay />
                     <DrawerContent>
-                        <DrawerCloseButton />
+                        <DrawerCloseButton w={50} h={50} />
                         <DrawerHeader fontSize={props.isMobile ? "xxx-large" : "large"}>
                             Welcome to my site{" "}
                         </DrawerHeader>

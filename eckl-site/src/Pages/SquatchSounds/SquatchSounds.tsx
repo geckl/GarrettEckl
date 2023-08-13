@@ -5,14 +5,16 @@ import ezdspImage from "../../Assets/Images/EZDSP.png";
 import ecklImage from "../../Assets/Images/Eckl2.jpg";
 import humanizerImage from "../../Assets/Images/RTHumanizer.png";
 import { TopBar } from "../../Components/TopBar/TopBar";
+import { useIsMobile } from "../../utils";
 
 export const SquatchSounds = () => {
+    const isMobile = useIsMobile();
 
     return (
         <Box h={"100vh"} minH={"100vh"} w={"100vw"} minW={"100vw"}>
             <Flex
                 w={"100%"}
-                h={"inherit"}
+                h={"95%"}
                 minH={350}
                 minW={340}
                 flexDirection={"column"}
@@ -32,15 +34,15 @@ export const SquatchSounds = () => {
                 }}
             >
                 <TopBar />
-                <Box w="80%" h="85%" bg="black" borderRadius={10} p={5} color="white" overflow={"scroll"}>
+                <Box w={isMobile ? "100%" : "80%"} h="85%" bg="black" borderRadius={10} p={5} color="white" overflow={"scroll"}>
                     <Text align="center" fontSize={"3xl"}>Squatch Sounds</Text>
                     <Spacer h={15} />
                     <Text align="center">"Squatch Sounds is an audio software company founded by Garrett Eckl. Focused on innovation and accessibility, Squatch Sounds software includes cutting edge DSP programs, workflow tools, and educational software."</Text><br />
                     <Tabs>
                         <TabList>
-                            <Tab>EZDSP</Tab>
-                            <Tab>Real Time Humanizer</Tab>
-                            <Tab>Coming Soon</Tab>
+                            <Tab fontSize={"2xl"}>EZDSP</Tab>
+                            <Tab fontSize={"2xl"}>Real Time Humanizer</Tab>
+                            <Tab fontSize={"2xl"}>Coming Soon</Tab>
                         </TabList>
 
                         <TabPanels h={"100%"}>

@@ -42,7 +42,7 @@ export const Landing = () => {
         <Box h={"100vh"} minH={"100vh"} w={"100vw"} minW={"100vw"}>
             <Flex
                 w={"100%"}
-                h={"inherit"}
+                h={"95%"}
                 minH={350}
                 minW={340}
                 flexDirection={"column"}
@@ -62,7 +62,7 @@ export const Landing = () => {
                 }}
             >
                 <TopBar />
-                <Spacer />
+                <Spacer h={"calc(100vh - 450)"} />
                 <Box w="80%" h={300} bg="black" borderRadius={10} p={5} color="white" overflow={"scroll"}>
                     <SoundfontProvider
                         instrumentName="acoustic_grand_piano"
