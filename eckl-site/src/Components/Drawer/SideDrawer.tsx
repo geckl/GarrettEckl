@@ -15,7 +15,7 @@ import {
     useToast,
     VStack
 } from "@chakra-ui/react";
-import { FaBars, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaBars, FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import ecklCV from "../../Assets/Images/GarrettEckl_CV.pdf";
 import { useIsMobile } from "../../utils";
@@ -124,6 +124,18 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
                                                 aria-label="side bar"
                                                 icon={<FaInstagram />}
                                                 colorScheme="facebook"
+                                                borderRadius={10}
+                                                ml={2}
+                                            ></IconButton>
+                                        </Link>
+                                        <Link
+                                            href="https://github.com/geckl"
+                                            isExternal
+                                        >
+                                            <IconButton
+                                                aria-label="side bar"
+                                                icon={<FaGithub />}
+                                                colorScheme="linkedin"
                                                 borderRadius={10}
                                                 ml={2}
                                             ></IconButton>
