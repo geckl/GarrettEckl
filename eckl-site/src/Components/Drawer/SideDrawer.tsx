@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { FaBars, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import ecklCV from "../../Assets/Images/GarrettEckl_OnlineResume.pdf";
+import ecklCV from "../../Assets/Images/GarrettEckl_CV.pdf";
 import { useIsMobile } from "../../utils";
 
 export const SideDrawer = (props: { isMobile: boolean }) => {
