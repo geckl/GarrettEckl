@@ -71,10 +71,10 @@ export const SideDrawer = (props: { isMobile: boolean }) => {
                                     onClose();
                                     navigate("/squatch-sounds");
                                 }}>Squatch Sounds</Button>
-                                <Button w="80%" onClick={() => {
+                                {/* <Button w="80%" onClick={() => {
                                     onClose();
                                     openInNewTab("https://www.yournameheremusic.com/");
-                                }}>Your Name Here</Button>
+                                }}>Your Name Here</Button> */}
                                 <Button w="80%" fontSize={"sm"} onClick={() => {
                                     onClose();
                                     openInNewTab("https://app.songr.ai/");
